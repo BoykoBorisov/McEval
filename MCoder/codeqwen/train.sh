@@ -16,8 +16,8 @@ CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7" python -m torch.distributed.launch --mast
     --output_dir $SAVE_PATH \
     --num_train_epochs 2 \
     --per_device_train_batch_size 1\
-    --per_device_eval_batch_size 4 \
-    --gradient_accumulation_steps 64 \
+    --per_device_eval_batch_size 1 \
+    --gradient_accumulation_steps 16 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \
     --model_max_length 5000 \
